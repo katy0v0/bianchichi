@@ -13,8 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
-    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .logo img {
@@ -24,8 +23,7 @@ header {
 .menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Permite desplazamiento horizontal en caso de que el menú sea más grande que la pantalla */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque si es necesario */
     margin: 0;
     padding: 0;
 }
@@ -38,12 +36,12 @@ header {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .right-menu {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque */
 }
 
 .right-menu a {
@@ -51,13 +49,12 @@ header {
     color: #000;
     margin-left: 10px;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .hero {
     position: relative;
     text-align: center;
-    height: auto;
 }
 
 .hero img {
@@ -75,55 +72,48 @@ header {
 }
 
 .overlay h1 {
-    font-size: 2rem; /* Ajuste de tamaño */
+    font-size: 2.5rem; /* Ajuste dinámico del tamaño del texto */
     margin: 0;
 }
 
 .brands {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Hace que los logos se acomoden en varias filas si no caben */
     margin-top: 20px;
 }
 
 .brands img {
     margin: 10px;
-    height: 40px; /* Tamaño ajustado */
+    height: 40px; /* Tamaño reducido para pantallas pequeñas */
 }
 
-/* Media Query para pantallas pequeñas */
+/* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    .top-bar {
+    .menu ul {
+        flex-direction: column; /* Hace que el menú sea vertical */
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin-bottom: 10px; /* Espaciado entre los elementos del menú */
+    }
+
+    .right-menu {
         flex-direction: column;
         align-items: center;
     }
 
-    .menu ul {
-        justify-content: space-evenly; /* Espaciado uniforme entre los elementos */
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .menu ul li {
-        margin: 0;
-        padding: 5px 0;
-    }
-
-    .right-menu {
-        flex-direction: row;
-        justify-content: center;
-    }
-
     .right-menu a {
-        margin: 5px;
+        margin: 5px 0; /* Ajuste del espaciado entre enlaces en pantallas pequeñas */
     }
 
     .overlay h1 {
-        font-size: 1.6rem;
+        font-size: 2rem; /* Reduce el tamaño del título en pantallas más pequeñas */
     }
 
     .brands img {
-        height: 30px; /* Ajuste adicional para pantallas pequeñas */
-        max-width: 100px;
+        height: 30px; /* Reduce aún más el tamaño de los logos */
     }
 }
+
