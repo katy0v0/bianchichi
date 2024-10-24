@@ -14,6 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: wrap; /* Permitir que el contenido se ajuste en pantallas pequeñas */
 }
 
 .logo img {
@@ -23,7 +24,7 @@ header {
 .menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque si es necesario */
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -41,7 +42,7 @@ header {
 
 .right-menu {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque */
+    flex-wrap: wrap;
 }
 
 .right-menu a {
@@ -72,31 +73,37 @@ header {
 }
 
 .overlay h1 {
-    font-size: 2.5rem; /* Ajuste dinámico del tamaño del texto */
+    font-size: 2.5rem;
     margin: 0;
 }
 
 .brands {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Hace que los logos se acomoden en varias filas si no caben */
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .brands img {
     margin: 10px;
-    height: 40px; /* Tamaño reducido para pantallas pequeñas */
+    height: 40px;
+    max-width: 100px; /* Limitar el ancho máximo de las imágenes */
 }
 
 /* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .menu ul {
-        flex-direction: column; /* Hace que el menú sea vertical */
+        flex-direction: column;
         align-items: center;
     }
 
     .menu ul li {
-        margin-bottom: 10px; /* Espaciado entre los elementos del menú */
+        margin-bottom: 10px;
     }
 
     .right-menu {
@@ -105,14 +112,15 @@ header {
     }
 
     .right-menu a {
-        margin: 5px 0; /* Ajuste del espaciado entre enlaces en pantallas pequeñas */
+        margin: 5px 0;
     }
 
     .overlay h1 {
-        font-size: 2rem; /* Reduce el tamaño del título en pantallas más pequeñas */
+        font-size: 2rem;
     }
 
     .brands img {
-        height: 30px; /* Reduce aún más el tamaño de los logos */
+        height: 30px;
+        max-width: 80px; /* Ajuste para pantallas más pequeñas */
     }
 }
