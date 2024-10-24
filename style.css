@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     flex-wrap: wrap;
 }
 
@@ -24,7 +24,8 @@ header {
 .menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Permite desplazamiento horizontal en caso de que el menú sea más grande que la pantalla */
     margin: 0;
     padding: 0;
 }
@@ -37,12 +38,12 @@ header {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .right-menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .right-menu a {
@@ -50,12 +51,13 @@ header {
     color: #000;
     margin-left: 10px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .hero {
     position: relative;
     text-align: center;
+    height: auto;
 }
 
 .hero img {
@@ -65,7 +67,7 @@ header {
 
 .overlay {
     position: absolute;
-    top: 40%; /* Ajuste para que el texto quede más abajo */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -73,7 +75,7 @@ header {
 }
 
 .overlay h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Ajuste de tamaño */
     margin: 0;
 }
 
@@ -86,25 +88,25 @@ header {
 
 .brands img {
     margin: 10px;
-    height: 40px;
-    max-width: 100px;
+    height: 40px; /* Tamaño ajustado */
 }
 
-/* Media Query para pantallas pequeñas (móviles) */
+/* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     .top-bar {
-        flex-direction: row;
-        flex-wrap: nowrap; /* Evitar que los elementos se dispersen verticalmente */
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu ul {
-        flex-direction: row;
-        justify-content: center; /* Asegura que el menú quede centrado y en una sola fila */
+        justify-content: space-evenly; /* Espaciado uniforme entre los elementos */
+        width: 100%;
+        padding: 0 10px;
     }
 
     .menu ul li {
-        margin: 5px; /* Reduce el espacio entre los elementos del menú */
+        margin: 0;
+        padding: 5px 0;
     }
 
     .right-menu {
@@ -116,16 +118,12 @@ header {
         margin: 5px;
     }
 
-    .overlay {
-        top: 45%; /* Ajuste del texto para evitar que se superponga demasiado con los logos */
-    }
-
     .overlay h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .brands img {
-        height: 30px;
-        max-width: 80px;
+        height: 30px; /* Ajuste adicional para pantallas pequeñas */
+        max-width: 100px;
     }
 }
