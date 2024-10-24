@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    flex-wrap: wrap; /* Permitir que el contenido se ajuste en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -65,7 +65,7 @@ header {
 
 .overlay {
     position: absolute;
-    top: 50%;
+    top: 40%; /* Ajuste para que el texto quede más abajo */
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -87,32 +87,37 @@ header {
 .brands img {
     margin: 10px;
     height: 40px;
-    max-width: 100px; /* Limitar el ancho máximo de las imágenes */
+    max-width: 100px;
 }
 
 /* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .top-bar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap; /* Evitar que los elementos se dispersen verticalmente */
+        justify-content: space-between;
     }
 
     .menu ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center; /* Asegura que el menú quede centrado y en una sola fila */
     }
 
     .menu ul li {
-        margin-bottom: 10px;
+        margin: 5px; /* Reduce el espacio entre los elementos del menú */
     }
 
     .right-menu {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .right-menu a {
-        margin: 5px 0;
+        margin: 5px;
+    }
+
+    .overlay {
+        top: 45%; /* Ajuste del texto para evitar que se superponga demasiado con los logos */
     }
 
     .overlay h1 {
@@ -121,6 +126,6 @@ header {
 
     .brands img {
         height: 30px;
-        max-width: 80px; /* Ajuste para pantallas más pequeñas */
+        max-width: 80px;
     }
 }
