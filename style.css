@@ -4,10 +4,12 @@ body {
     padding: 0;
 }
 
+
 header {
     background-color: #ffcc00;
     padding: 10px 0;
 }
+
 
 .top-bar {
     display: flex;
@@ -16,51 +18,51 @@ header {
     padding: 0 20px;
 }
 
+
 .logo img {
     height: 40px;
 }
 
+
 .menu ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque si es necesario */
     margin: 0;
     padding: 0;
 }
 
+
 .menu ul li {
-    margin-right: 10px;
+    margin-right: 20px;
 }
+
 
 .menu ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    font-size: 1rem;
 }
 
-.right-menu {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en línea o en bloque */
-}
 
 .right-menu a {
     text-decoration: none;
     color: #000;
-    margin-left: 10px;
+    margin-left: 15px;
     font-weight: bold;
-    font-size: 1rem;
 }
+
 
 .hero {
     position: relative;
     text-align: center;
 }
 
+
 .hero img {
     width: 100%;
     height: auto;
 }
+
 
 .overlay {
     position: absolute;
@@ -71,48 +73,22 @@ header {
     text-shadow: 2px 2px 5px #000;
 }
 
+
 .overlay h1 {
-    font-size: 2.5rem; /* Ajuste dinámico del tamaño del texto */
+    font-size: 48px;
     margin: 0;
 }
+
 
 .brands {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Hace que los logos se acomoden en varias filas si no caben */
     margin-top: 20px;
 }
 
+
 .brands img {
-    margin: 10px;
-    height: 40px; /* Tamaño reducido para pantallas pequeñas */
+    margin: 0 10px;
+    height: 50px;
 }
 
-/* Media Query para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column; /* Hace que el menú sea vertical */
-        align-items: center;
-    }
-
-    .menu ul li {
-        margin-bottom: 10px; /* Espaciado entre los elementos del menú */
-    }
-
-    .right-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .right-menu a {
-        margin: 5px 0; /* Ajuste del espaciado entre enlaces en pantallas pequeñas */
-    }
-
-    .overlay h1 {
-        font-size: 2rem; /* Reduce el tamaño del título en pantallas más pequeñas */
-    }
-
-    .brands img {
-        height: 30px; /* Reduce aún más el tamaño de los logos */
-    }
-}
